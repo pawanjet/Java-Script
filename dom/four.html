@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai or code</title>
+    <style >
+        .main-body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="main-body">
+    <ul class="langauge">
+        <li>
+            JavaScript
+        </li>
+    </ul>
+</body>
+
+<script>
+
+    function addLanguageElement(langauge){
+
+        const li = document.createElement("li")
+        li.innerHTML = `${langauge}`
+        const ulList = document.querySelector(".langauge")
+        ulList.appendChild(li)
+    }
+
+    addLanguageElement("Java")
+
+    function addLanguageInOptimum(langauge){
+
+        const li =document.createElement("li")
+        li.appendChild(document.createTextNode(langauge))
+        document.querySelector(".langauge").appendChild(li)
+    }
+
+    addLanguageInOptimum("Python")
+
+    //Edit
+    function editLangauge(){
+        const secondItem =  document.querySelector('li:nth-child(2)')
+
+        const newListElement = document.createElement("li")
+        newListElement.textContent = "GoLang"
+        secondItem.replaceWith(newListElement)
+    }
+
+    editLangauge()
+
+</script>
+</html>
